@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": [
+    "//"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".open-next/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "env": [
+        "BASEHUB_TOKEN",
+        "BASEHUB_DEBUG_FORCED_URL",
+        "NEXT_PUBLIC_SITE_URL"
+      ]
+    }
+  }
+}
