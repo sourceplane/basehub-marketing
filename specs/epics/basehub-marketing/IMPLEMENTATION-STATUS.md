@@ -4,7 +4,10 @@
 |---|---|---|
 | BH0 — the spec | ✅ | the repository's first commit, BH-1 |
 | BH1 — the marketing site on Workers | ✅ | BH-2 |
-| BH2 — a baseline | planned | BH-3 |
+| BH2 — a baseline | ✅ | BH-3, tagged `baseline-v1` |
+
+The Worker is 16.0 MiB raw, 3.1 MiB gzipped (3186 KiB) — over Workers
+Free's 3 MiB, inside Paid's 10 MiB (risk BH-F).
 
 ## Departures from the upstream template
 
