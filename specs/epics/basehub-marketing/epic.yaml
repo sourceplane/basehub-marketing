@@ -1,0 +1,31 @@
+# The epic's declaration. metadata.name equals the directory name; metadata.key
+# is the task-key prefix this epic reserves (BH → BH-1, BH-2, …). Owner, target
+# date and health are the platform's — never written here.
+apiVersion: orun.io/v1
+kind: Epic
+metadata:
+  name: basehub-marketing
+  key: BH
+spec:
+  title: "BaseHub's marketing website template on Cloudflare Workers"
+  summary: "BaseHub's marketing website template — pages composed in BaseHub from section blocks, a blog, a changelog, feeds, a sitemap, a theme and navigation, read over BaseHub's GraphQL API through the basehub SDK — runs on Cloudflare Workers + Static Assets through @opennextjs/cloudflare, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new site from nothing to live on stage and prod in one landing, serving bundled sample content until its owner connects a BaseHub repository."
+  state: started
+  milestones:
+    - name: "BH0 — the spec"
+      exitCriteria:
+        - "the repository is born with its intent, CI, tooling and spec index, and this doc set and the task contracts are on main"
+      tasks: [BH-1]
+    - name: "BH1 — the marketing site on Workers"
+      exitCriteria:
+        - "apps/web is the upstream template, built by next build without the basehub CLI, then by OpenNext into one Worker with Static Assets, every page pre-rendered as upstream"
+        - "with no BASEHUB_TOKEN at build the site serves bundled sample content under a bar that says how to connect — never a 500 — and with one it reads the repository"
+        - "`pnpm typecheck`, `pnpm lint`, `pnpm test` and `pnpm build` are green"
+        - "`wrangler dev` serves every page, post and release, the feeds, sitemap, robots and health check, and a 404 for an unknown path"
+        - "the README says how to run, test, preview, connect and deploy it, and how every Vercel piece maps to Cloudflare"
+      tasks: [BH-2]
+    - name: "BH2 — a baseline"
+      exitCriteria:
+        - "blueprint.yaml (the console card) and repo-blueprint.yaml (the build) take a new site from nothing to live on stage and prod in one landing, then record it"
+        - "a site built from it carries the site only, renamed throughout to its own name, repository and Worker, with BaseHub's own links intact"
+        - "Baseline CI is green: contract tests, generated component docs, the blueprint read by the pinned orun, the leak gate, the offline bootstrap and the end-to-end tier, unconnected and against a stand-in BaseHub"
+      tasks: [BH-3]
