@@ -1,0 +1,24 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: BH-3
+  title: "A baseline"
+spec:
+  goal: The repository becomes an Orun baseline — the console card, the build document, the identity and rename engine, the context pack, the deployment record and the baseline's tests — that takes a new site from nothing to live on stage and prod in one landing
+  affects:
+    - blueprint.yaml
+    - repo-blueprint.yaml
+    - .baseline
+    - tooling/rebrand
+    - tooling/bootstrap
+    - hooks
+    - docs/phases
+    - ai/context
+    - testing
+    - .github/workflows/baseline.yml
+    - .github/workflows/tag.yml
+    - BOOTSTRAP.md
+  doneWhen:
+    - Baseline CI is green on main
+    - the card passes card-check, fetched from main at the merge commit
+  gates: []

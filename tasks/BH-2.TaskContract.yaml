@@ -1,0 +1,18 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: BH-2
+  title: "The marketing site on Workers"
+spec:
+  goal: BaseHub's marketing website template runs on Cloudflare Workers + Static Assets through OpenNext, deployable before a BaseHub repository exists, with its tests and a README that says how it maps to Vercel
+  affects:
+    - apps/web
+    - tests/web
+    - pnpm-lock.yaml
+    - pnpm-workspace.yaml
+    - README.md
+    - .gitignore
+  doneWhen:
+    - pnpm typecheck, lint, test and build are green
+    - wrangler dev serves every sample page, post and release, the feeds, sitemap, robots and health check, and a 404 for an unknown path, with no BaseHub repository behind it
+  gates: []
