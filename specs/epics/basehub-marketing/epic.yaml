@@ -9,7 +9,7 @@ metadata:
 spec:
   title: "BaseHub's marketing website template on Cloudflare Workers"
   summary: "BaseHub's marketing website template — pages composed in BaseHub from section blocks, a blog, a changelog, feeds, a sitemap, a theme and navigation, read over BaseHub's GraphQL API through the basehub SDK — runs on Cloudflare Workers + Static Assets through @opennextjs/cloudflare, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new site from nothing to live on stage and prod in one landing, serving bundled sample content until its owner connects a BaseHub repository."
-  state: started
+  state: completed
   milestones:
     - name: "BH0 — the spec"
       exitCriteria:

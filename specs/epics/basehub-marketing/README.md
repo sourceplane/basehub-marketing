@@ -8,7 +8,7 @@ the baseline that makes a copy of it somebody else's site in one landing.**
 
 | | |
 |---|---|
-| Status | In progress — BH1 on main: the site runs on Workers |
+| Status | ✅ Shipped (`baseline-v1`) — proven offline in Baseline CI, unconnected and against a stand-in BaseHub; not yet live (risk BH-A) |
 | Upstream | [basehub-ai/marketing-website-template](https://github.com/basehub-ai/marketing-website-template), at `7cfc403` (2025-12-11). **No licence**: no LICENSE file, no `license` in `package.json`, none recorded by GitHub (risk BH-C) |
 | Reference | [cms-sanity](https://github.com/sourceplane/cms-sanity) and [cms-contentful](https://github.com/sourceplane/cms-contentful) — the same scaffolding, tests and bootstrap, and the unconnected sample mode |
 | Key | `BH` |
